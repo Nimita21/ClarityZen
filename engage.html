@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ClarityZen</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="description" content="ClarityZen is a philosophy for those who lead.
+It advances a single belief:
+Clarity precedes scale.
+Built on disciplined thinking and strategic composure, ClarityZen is an evolving body of principles designed to shape leaders, organizations, and systems for the long term.">
+<link rel="canonical" href="https://clarityzen.com/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png">
+<style>
+:root{
+  --bg:#0b0f16;
+  --bg-soft:#111722;
+  --text:#e8e8e8;
+  --muted:#9aa3b2;
+  --gold:#c6a86e;
+  --border:#1e2633;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  line-height:1.7;
+}
+.container{
+  width:90%;
+  max-width:1150px;
+  margin:0 auto;
+}
+h1,h2,h3{
+  font-family:'Playfair Display',serif;
+  font-weight:600;
+}
+section{padding:110px 0}
+a{text-decoration:none;color:inherit}
+.logo {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+/* NAV */
+nav {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-btn {
+  border: 1px solid var(--gold);
+  padding: 8px 16px;
+  color: var(--gold);
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:160px 0;
+  background:linear-gradient(to bottom,rgba(255,255,255,0.06),transparent);
+}
+.hero h1{
+  font-size:58px;
+}
+.hero em{
+  font-style:italic;
+  color:var(--muted);
+}
+.hero p{
+  max-width:650px;
+  margin:30px auto 0;
+  color:var(--muted);
+}
+
+/* ALT SPLIT */
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+.split img{
+  width:100%;
+  border-radius:4px;
+}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:2px;
+  color:var(--gold);
+  margin-bottom:18px;
+}
+.muted{color:var(--muted)}
+
+.feature-list{
+  margin-top:25px;
+  list-style:none;
+}
+.feature-list li{
+  margin-bottom:10px;
+  color:var(--muted);
+}
+
+/* TABLE */
+.table-section{
+  background:var(--bg-soft);
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:50px;
+  font-size:14px;
+}
+th,td{
+  padding:16px;
+  border:1px solid var(--border);
+  text-align:left;
+}
+th{
+  color:var(--gold);
+  font-weight:500;
+}
+tr:hover{background:#131c2a}
+
+/* CTA */
+.cta{
+  text-align:center;
+  background:linear-gradient(135deg,#0e1420,#111c2c);
+}
+.cta h2{
+  font-size:44px;
+}
+.cta em{
+  font-style:italic;
+  color:var(--muted);
+}
+.cta-buttons{
+  margin-top:40px;
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.btn-primary{
+  background:var(--gold);
+  color:black;
+  padding:14px 28px;
+}
+.btn-secondary{
+  border:1px solid var(--gold);
+  padding:14px 28px;
+  color:var(--gold);
+}
+
+/* FOOTER */
+footer{
+  padding:70px 0;
+  border-top:1px solid var(--border);
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:50px;
+}
+footer h4{
+  margin-bottom:18px;
+  font-family:'Playfair Display',serif;
+}
+footer p,footer a{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:10px;
+  display:block;
+}
+.copyright{
+  margin-top:50px;
+  text-align:center;
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .split{grid-template-columns:1fr}
+  .hero h1{font-size:38px}
+  .footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <div class="logo">CLARITYZEN</div>
+        <div class="nav-links">
+          <a href="philosophy.html">Philosophy</a>
+          <a href="shift.html">The Shift</a>
+          <a href="engage.html">Engage</a>
+          <a href="contact.html" class="nav-btn">Begin</a>
+        </div>
+      </nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">DIGITAL PROGRAMS</div>
+    <h1>Every path leads<br>to the same place.<br><em>Inner steadiness. Outer clarity.</em></h1>
+    <p>
+      ClarityZen offers four distinct modes of engagement — each designed
+      for a different context, scale, and depth of commitment.
+    </p>
+  </div>
+</section>
+
+<!-- PRIVATE COACHING -->
+<section>
+  <div class="container split">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="">
+    <div>
+      <div class="eyebrow">MOST IMMERSIVE</div>
+      <h2>Private Executive Coaching</h2>
+      <p class="muted">
+        The most intimate and intensive form of engagement. Reserved
+        for senior leaders navigating high-stakes decisions.
+      </p>
+      <ul class="feature-list">
+        <li>12-month container</li>
+        <li>Monthly 1:1 sessions</li>
+        <li>Application & referral only</li>
+        <li>Limited clients at any time</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP CIRCLES -->
+<section style="background:var(--bg-soft)">
+  <div class="container split">
+    <div>
+      <div class="eyebrow">SMALL GROUP FORMAT</div>
+      <h2>Leadership Circles</h2>
+      <p class="muted">
+        A curated gathering of senior leaders committed to honest conversation
+        and deep professional growth.
+      </p>
+      <ul class="feature-list">
+        <li>Quarterly gatherings</li>
+        <li>24 leaders per cohort</li>
+        <li>Hybrid format</li>
+        <li>Application process</li>
+      </ul>
+    </div>
+    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" alt="">
+  </div>
+</section>
+
+<!-- CORPORATE -->
+<section>
+  <div class="container split">
+    <img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9" alt="">
+    <div>
+      <div class="eyebrow">FOR ORGANIZATIONS</div>
+      <h2>Corporate Workshops</h2>
+      <p class="muted">
+        Multi-day immersive experiences designed to strengthen
+        alignment, clarity, and leadership resilience.
+      </p>
+      <ul class="feature-list">
+        <li>2–3 day intensives</li>
+        <li>On-site or virtual</li>
+        <li>Organization-wide option</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- DIGITAL -->
+<section style="background:var(--bg-soft)">
+  <div class="container split">
+    <div>
+      <div class="eyebrow">SELF-PACED</div>
+      <h2>Digital Programs</h2>
+      <p class="muted">
+        Foundational practices delivered online. Ideal for leaders
+        not yet ready for deep container work.
+      </p>
+      <ul class="feature-list">
+        <li>Self-paced modules</li>
+        <li>Global access</li>
+        <li>Foundational clarity practices</li>
+      </ul>
+    </div>
+    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" alt="">
+  </div>
+</section>
+
+<!-- TABLE -->
+<section class="table-section">
+  <div class="container">
+    <h2 style="text-align:center">Find the right engagement.</h2>
+    <table>
+      <tr>
+        <th>Best For</th>
+        <th>Format</th>
+        <th>Duration</th>
+        <th>Access</th>
+      </tr>
+      <tr>
+        <td>Private Coaching</td>
+        <td>1:1 Intensive</td>
+        <td>12 Months</td>
+        <td>Application Only</td>
+      </tr>
+      <tr>
+        <td>Leadership Circles</td>
+        <td>Small Group</td>
+        <td>24 Weeks</td>
+        <td>Cohort-Based</td>
+      </tr>
+      <tr>
+        <td>Corporate Workshops</td>
+        <td>Team Intensive</td>
+        <td>2–3 Days</td>
+        <td>Organization</td>
+      </tr>
+      <tr>
+        <td>Digital Programs</td>
+        <td>Self-Paced</td>
+        <td>Flexible</td>
+        <td>Global Access</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>Not sure which path<br><em>is right for you?</em></h2>
+    <p class="muted" style="margin-top:20px;">
+      Begin the conversation. We will help you determine where you
+      should begin.
+    </p>
+
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn-primary">Begin the Conversation</a>
+      <a href="philosophy.html" class="btn-secondary">Read the Philosophy</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>CLARITYZEN</h4>
+        <p>A sanctuary for senior executives committed to stillness, clarity, and purpose.</p>
+      </div>
+  
+      <div>
+        <h4>Navigation</h4>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="engage.html">Engage</a>
+        <a href="contact.html">Contact</a>
+      </div>
+  
+      <div>
+        <h4>Connect</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">X</a>
+      </div>
+    </div>
+  
+    <div class="copyright">
+      © 2026 ClarityZen. All rights reserved.
+    </div>
+  </footer>
+  
+  </body>
+  </html>

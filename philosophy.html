@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ClarityZen</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a392519dba.js" crossorigin="anonymous"></script>
+<meta name="description" content="ClarityZen is a philosophy for those who lead.
+It advances a single belief:
+Clarity precedes scale.
+Built on disciplined thinking and strategic composure, ClarityZen is an evolving body of principles designed to shape leaders, organizations, and systems for the long term.">
+<link rel="canonical" href="https://clarityzen.com/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png">
+<style>
+:root {
+  --bg: #0b0f14;
+  --bg-soft: #11161d;
+  --gold: #c6a75e;
+  --text: #e9e7e4;
+  --muted: #8b9098;
+  --border: #1c232d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section {
+  padding: 120px 0;
+}
+
+.section.dark {
+  background: var(--bg-soft);
+}
+
+.small-label {
+  color: var(--gold);
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: block;
+}
+/* NAVIGATION */
+nav {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-btn {
+  border: 1px solid var(--gold);
+  padding: 8px 16px;
+  color: var(--gold);
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 180px 20px 140px;
+  background: linear-gradient(rgba(11,15,20,.85), rgba(11,15,20,.95)),
+              url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2000&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 54px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold);
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 40px auto 0;
+  color: var(--muted);
+}
+
+/* PHILOSOPHY INTRO */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+}
+
+.split h2 {
+  font-size: 32px;
+}
+
+.split p {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* FIVE PILLARS */
+.center-title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.pillar {
+  border: 1px solid var(--border);
+  padding: 30px;
+  background: #0f141b;
+}
+
+.pillar h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.pillar p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* BELIEFS */
+.beliefs {
+  text-align: center;
+}
+
+.beliefs p {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  margin: 50px auto;
+  max-width: 700px;
+}
+
+.beliefs p em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+/* WHAT IT IS NOT */
+.check-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.check-item {
+  display: flex;
+  gap: 15px;
+}
+
+.check-item span {
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.check-item p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* QUOTE */
+.quote {
+  text-align: center;
+  padding: 150px 20px;
+}
+
+.quote p {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-style: italic;
+  max-width: 800px;
+  margin: auto;
+}
+
+.quote small {
+  display: block;
+  margin-top: 20px;
+  color: var(--gold);
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  margin: 10px;
+  display: inline-block;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+footer {
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 100px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+footer h4 {
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+footer p, footer a {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.copyright {
+  margin-top: 40px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media(max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+  .split {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    flex-direction: column;
+    gap: 20px;
+}
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+  <nav>
+    <div class="logo">CLARITYZEN</div>
+    <div class="nav-links">
+      <a href="philosophy.html">Philosophy</a>
+      <a href="shift.html">The Shift</a>
+      <a href="engage.html">Engage</a>
+      <a href="contact.html" class="nav-btn">Begin</a>
+    </div>
+  </nav>
+</div>
+
+<section class="hero">
+  <span class="small-label">THE CLARITYZEN PHILOSOPHY</span>
+  <h1>
+    Stillness is not the absence of ambition.<br>
+    <em>It is its highest form.</em>
+  </h1>
+  <p>
+    We do not teach leaders to slow down. We teach them to go deeper — so that every action, every decision, every word carries the full weight of their presence.
+  </p>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div>
+      <span class="small-label">Where the philosophy begins</span>
+      <h2>Where the philosophy begins.</h2>
+    </div>
+    <div>
+      <p>
+        For decades, leadership development has focused on the external — strategy, communication, execution. These are necessary. But they are incomplete.
+      </p>
+      <p>
+        ClarityZen begins with a different premise: that the quality of a leader’s inner state is the single greatest determinant of the quality of their leadership.
+      </p>
+      <p>
+        When the inner state is reactive, strategy becomes erratic execution. When the inner state is grounded, clear, and steady — ordinary decisions become extraordinary outcomes.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="container">
+    <div class="center-title">
+      <span class="small-label">CORE PRINCIPLES</span>
+      <h2>The Five Pillars</h2>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <h3>01 — Presence Over Performance</h3>
+        <p>The leader who is fully present is more transformative than the one who is merely efficient.</p>
+      </div>
+      <div class="pillar">
+        <h3>02 — Clarity in Stillness</h3>
+        <p>Noise is not intelligence. The ability to be internally quiet is the highest strategic skill.</p>
+      </div>
+      <div class="pillar">
+        <h3>03 — Steadiness as Strength</h3>
+        <p>Emotionally calm presence is not passivity. It is controlled power.</p>
+      </div>
+      <div class="pillar">
+        <h3>04 — Depth Before Speed</h3>
+        <p>The most sustainable momentum emerges from grounded execution.</p>
+      </div>
+      <div class="pillar">
+        <h3>05 — Alignment as Foundation</h3>
+        <p>When values, actions, and identity align — performance becomes effortless.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section beliefs">
+  <div class="container">
+    <p>We believe the world does not need more driven leaders.<br><em>It needs more grounded ones.</em></p>
+    <p>We believe that silence is not wasted time.<br><em>It is where the best thinking lives.</em></p>
+    <p>We believe that inner steadiness is not a luxury.<br><em>It is a competitive advantage.</em></p>
+    <p>We believe the most powerful thing a leader can do<br><em>is become unshakeable.</em></p>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="container">
+    <div class="center-title">
+      <span class="small-label">THE DISTINCTION</span>
+      <h2>What ClarityZen is not.</h2>
+    </div>
+
+    <div class="check-grid">
+      <div class="check-item">
+        <span>✓</span>
+        <p>Not a wellness program. We do not teach stress management techniques.</p>
+      </div>
+      <div class="check-item">
+        <span>✓</span>
+        <p>Not motivational rhetoric. This is depth work, not inspiration.</p>
+      </div>
+      <div class="check-item">
+        <span>✓</span>
+        <p>Not a personality brand. It is a leadership movement.</p>
+      </div>
+      <div class="check-item">
+        <span>✓</span>
+        <p>A philosophy of inner architecture — building stability beneath performance.</p>
+      </div>
+      <div class="check-item">
+        <span>✓</span>
+        <p>Designed for serious leaders who have already achieved much.</p>
+      </div>
+      <div class="check-item">
+        <span>✓</span>
+        <p>A timeless institutional framework expressed in modern language.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <p>
+    “The leader who has found their center does not need to raise their voice.
+    The room already knows.”
+  </p>
+  <small>— ClarityZen</small>
+</section>
+
+<section class="section dark cta">
+  <div class="container">
+    <span class="small-label">BEGIN THE WORK</span>
+    <h2>Ready to go deeper?</h2>
+    <p>The philosophy is the beginning. The transformation happens in practice.</p>
+    <a href="contact.html" class="btn">Begin the Conversation</a>
+    <a href="engage.html" class="btn">Explore Engagement</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>CLARITYZEN</h4>
+        <p>A sanctuary for senior executives committed to stillness, clarity, and purpose.</p>
+      </div>
+  
+      <div>
+        <h4>Navigation</h4>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="engage.html">Engage</a>
+        <a href="contact.html">Contact</a>
+      </div>
+  
+      <div>
+        <h4>Connect</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">X</a>
+      </div>
+    </div>
+  
+    <div class="copyright">
+      © 2026 ClarityZen. All rights reserved.
+    </div>
+  </footer>
+  
+  </body>
+  </html>

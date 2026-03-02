@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ClarityZen</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a392519dba.js" crossorigin="anonymous"></script>
+<meta name="description" content="ClarityZen is a philosophy for those who lead.
+It advances a single belief:
+Clarity precedes scale.
+Built on disciplined thinking and strategic composure, ClarityZen is an evolving body of principles designed to shape leaders, organizations, and systems for the long term.">
+<link rel="canonical" href="https://clarityzen.com/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png">
+<style>
+:root {
+  --bg: #0c0f14;
+  --bg-soft: #11151c;
+  --gold: #c6a75e;
+  --text: #e8e6e3;
+  --muted: #8b8f96;
+  --border: #1c222c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* NAVIGATION */
+nav {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-btn {
+  border: 1px solid var(--gold);
+  padding: 8px 16px;
+  color: var(--gold);
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 140px 0 120px;
+}
+
+.hero small {
+  letter-spacing: 2px;
+  color: var(--gold);
+  font-size: 12px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 30px;
+  border: 1px solid var(--gold);
+  padding: 12px 26px;
+  color: var(--gold);
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+/* SECTION */
+.section {
+  padding: 100px 0;
+}
+
+.section.dark {
+  background: var(--bg-soft);
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.section p.lead {
+  max-width: 700px;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  padding: 30px;
+  background: transparent;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: var(--gold);
+}
+
+.card h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* SHIFT */
+.shift-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 60px;
+}
+
+.shift-box {
+  border: 1px solid var(--border);
+  padding: 40px;
+  text-align: center;
+  background: var(--bg-soft);
+}
+
+.shift-box small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.shift-box h3 {
+  margin-top: 10px;
+}
+
+/* PHILOSOPHY */
+.philosophy {
+  max-width: 600px;
+}
+
+.philosophy h2 span {
+  color: var(--gold);
+  font-style: italic;
+}
+
+/* FOUNDER */
+.founder {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.founder img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.founder p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ENGAGE */
+.engage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+footer {
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 100px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+footer h4 {
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+footer p, footer a {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.copyright {
+  margin-top: 40px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <nav>
+   
+    <div class="logo">CLARITYZEN</div>
+    <div class="nav-links">
+      <a href="philosophy.html">Philosophy</a>
+      <a href="shift.html">The Shift</a>
+      <a href="engage.html">Engage</a>
+      <a href="contact.html" class="nav-btn">Begin</a>
+    </div>
+  </nav>
+</div>
+
+<section class="hero">
+  <small>THE CALM LEADERSHIP MOVEMENT</small>
+  <h1>
+    The next generation of leaders will not be louder.<br>
+    <em>They will be steadier.</em>
+  </h1>
+  <a href="contact.html" class="hero-btn">Begin the Conversation</a>
+</section>
+
+<section class="section dark">
+  <div class="container">
+    <h2>Achievement without alignment is unsustainable.</h2>
+    <p class="lead">
+      The modern executive landscape is defined by noise. Leaders are operating in a state of constant reactivity, mistaking pressure for performance.
+    </p>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Constant Mental Noise</h3>
+        <p>The inability to disconnect and find stillness.</p>
+      </div>
+      <div class="card">
+        <h3>Decision Fatigue</h3>
+        <p>Eroding judgment through sheer volume of choices.</p>
+      </div>
+      <div class="card">
+        <h3>Hidden Anxiety</h3>
+        <p>The quiet weight of pressure beneath the surface.</p>
+      </div>
+      <div class="card">
+        <h3>Pressure-Driven</h3>
+        <p>Performance fueled by stress rather than clarity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <small style="color: var(--gold); letter-spacing: 2px;">THE TRANSFORMATION</small>
+    <h2>The Shift</h2>
+
+    <div class="shift-grid">
+      <div class="shift-box">
+        <small>From Reactivity</small>
+        <h3>To Centered</h3>
+      </div>
+      <div class="shift-box">
+        <small>From Burnout</small>
+        <h3>To Sustainable Performance</h3>
+      </div>
+      <div class="shift-box">
+        <small>From Anxiety</small>
+        <h3>To Clarity</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="container philosophy">
+    <small style="color: var(--gold); letter-spacing: 2px;">THE PHILOSOPHY</small>
+    <h2>Leadership from <span>Stillness.</span></h2>
+    <p>
+      True authority does not come from volume, but from depth. In a world that rewards speed, we cultivate the power of the pause.
+      <br><br>
+      ClarityZen is not a methodology. It is a return to the fundamental ground of being. The leader who is most effective makes decisions from a place of inner steadiness.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container founder">
+    <img src="images/rajeev.jpeg" alt="Founder">
+    <div>
+      <h3>Rajeev Priyadarshi</h3>
+      <small style="color: var(--gold)">Architect of ClarityZen</small>
+      <p>
+        “I built ClarityZen not as a guru, but as a fellow traveler who found that the traditional metrics of success were incomplete.”
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="container">
+    <h2 style="text-align:center;">Ways to Engage</h2>
+
+    <div class="engage-grid">
+      <div class="card">
+        <h3>Private Executive Coaching</h3>
+        <p>One-on-one executive work for the senior leader seeking alignment and sustainable high performance.</p>
+      </div>
+      <div class="card">
+        <h3>Leadership Circles</h3>
+        <p>Curated small groups of accomplished peers in a sanctuary of shared dialogue and reflection.</p>
+      </div>
+      <div class="card">
+        <h3>Corporate Workshops</h3>
+        <p>Bringing the principles of steady leadership to your executive team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>CLARITYZEN</h4>
+        <p>A sanctuary for senior executives committed to stillness, clarity, and purpose.</p>
+      </div>
+  
+      <div>
+        <h4>Navigation</h4>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="engage.html">Engage</a>
+        <a href="contact.html">Contact</a>
+      </div>
+  
+      <div>
+        <h4>Connect</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">X</a>
+      </div>
+    </div>
+  
+    <div class="copyright">
+      © 2026 ClarityZen. All rights reserved.
+    </div>
+  </footer>
+  
+  </body>
+  </html>

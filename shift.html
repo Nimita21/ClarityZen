@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ClarityZen – The Shift</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="description" content="ClarityZen is a philosophy for those who lead.
+It advances a single belief:
+Clarity precedes scale.
+Built on disciplined thinking and strategic composure, ClarityZen is an evolving body of principles designed to shape leaders, organizations, and systems for the long term.">
+<link rel="canonical" href="https://clarityzen.com/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png">
+<style>
+:root{
+  --bg-dark: #0b0f14;
+  --bg-darker: #070a0f;
+  --gold: #c6a46c;
+  --muted: #9aa4b2;
+  --light: #e8edf4;
+  --border: rgba(255,255,255,0.06);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter', sans-serif;
+  background: var(--bg-dark);
+  color: var(--light);
+  line-height:1.7;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+h1,h2,h3,h4{
+  font-family:'Playfair Display', serif;
+  font-weight:400;
+}
+
+.gold{ color: var(--gold); }
+.muted{ color: var(--muted); }
+
+section{
+  padding:120px 0;
+  border-bottom:1px solid var(--border);
+}
+
+/* NAVIGATION */
+nav {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-btn {
+  border: 1px solid var(--gold);
+  padding: 8px 16px;
+  color: var(--gold);
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: var(--gold);
+  color: #000;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:linear-gradient(to bottom, rgba(255,255,255,0.15), var(--bg-dark) 60%);
+  padding-top:80px;
+}
+
+.hero h1{
+  font-size:64px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  max-width:700px;
+  margin:20px auto;
+  color:var(--muted);
+}
+
+/* ARCHITECTURE GRID */
+.arch-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+  margin-top:60px;
+}
+
+.card{
+  border:1px solid var(--border);
+  padding:30px;
+  background:var(--bg-darker);
+}
+
+.card h4{
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* SPLIT SECTION */
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+
+.split img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  filter:grayscale(100%);
+}
+
+.split h2{
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+.split p{
+  color:var(--muted);
+  margin-bottom:20px;
+}
+
+.feature-box{
+  border:1px solid var(--border);
+  padding:20px;
+  margin-top:20px;
+  background:var(--bg-darker);
+  font-size:14px;
+}
+
+/* PROCESS SECTION */
+.process{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+}
+
+.steps{
+  display:grid;
+  gap:30px;
+}
+
+.step h4{
+  margin-bottom:10px;
+}
+
+.step p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  padding:140px 0;
+  background:linear-gradient(180deg, var(--bg-dark), #101722);
+}
+
+.cta h2{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 30px;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  text-decoration:none;
+  margin:10px;
+  font-size:14px;
+  letter-spacing:1px;
+}
+
+.btn:hover{
+  background:var(--gold);
+  color:#000;
+}
+
+
+footer {
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 100px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+footer h4 {
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+footer p, footer a {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.copyright {
+  margin-top: 40px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+         
+          <div class="logo">CLARITYZEN</div>
+          <div class="nav-links">
+            <a href="philosophy.html">Philosophy</a>
+            <a href="shift.html">The Shift</a>
+            <a href="engage.html">Engage</a>
+            <a href="contact.html" class="nav-btn">Begin</a>
+          </div>
+        </nav>
+      </div>
+      
+
+<section class="hero">
+  <div class="container">
+    <p class="gold">THE TRANSFORMATION</p>
+    <h1>The Shift</h1>
+    <p><em>From who you have been forced to become,<br>to who you were always capable of being.</em></p>
+    <p>The Shift is not a technique. It is not a program. It is a fundamental transformation—from a reactive identity built on pressure, to an intentional inner architecture.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="gold">FOUR TRANSFORMATIONS</p>
+    <h2>The architecture of change.</h2>
+
+    <div class="arch-grid">
+      <div class="card">
+        <h4>Centered</h4>
+        <p>Operating from a place of grounded calm rather than constant urgency.</p>
+      </div>
+      <div class="card">
+        <h4>Sustainable Performance</h4>
+        <p>Consistent execution without burnout or volatility.</p>
+      </div>
+      <div class="card">
+        <h4>Clarity</h4>
+        <p>Decisions rooted in awareness instead of noise.</p>
+      </div>
+      <div class="card">
+        <h4>Inner Steadiness</h4>
+        <p>Composure under pressure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="">
+    <div>
+      <p class="gold">01 — THE SHIFT</p>
+      <h2>To <span class="gold">Centered.</span></h2>
+      <p>Reactivity is not a character flaw. It is the natural consequence of years of operating in environments that reward speed over depth.</p>
+      <div class="feature-box">
+        Reduced urgency · Increased presence · Strategic calm · Decisive focus
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <div>
+      <p class="gold">02 — THE SHIFT</p>
+      <h2>To <span class="gold">Sustainable Performance.</span></h2>
+      <p>The modern model says high performance is a function of effort. The Shift rejects this. True performance is built on stability.</p>
+      <div class="feature-box">
+        Fewer crashes · Greater consistency · Clarity in execution
+      </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="">
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="">
+    <div>
+      <p class="gold">03 — THE SHIFT</p>
+      <h2>To <span class="gold">Clarity.</span></h2>
+      <p>Executive clarity is rarely about more information. It is about less noise and deeper awareness.</p>
+      <div class="feature-box">
+        Cleaner priorities · Reduced second-guessing · Strategic precision
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <div>
+      <p class="gold">04 — THE SHIFT</p>
+      <h2>To <span class="gold">Inner Steadiness.</span></h2>
+      <p>Most high performers mistake intensity for strength. Steadiness is different. It is strength without volatility.</p>
+      <div class="feature-box">
+        Emotional regulation · Confident composure · Sustainable resilience
+      </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="">
+  </div>
+</section>
+
+<section>
+  <div class="container process">
+    <div>
+      <h2>How the Shift <em>actually happens.</em></h2>
+      <p class="muted">This is not a one-time insight. It is a structured transformation that unfolds over time through disciplined practice.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h4>1 — Recognition</h4>
+        <p>Seeing clearly where your current model is misaligned.</p>
+      </div>
+      <div class="step">
+        <h4>2 — Deconstruction</h4>
+        <p>Breaking inherited operating systems.</p>
+      </div>
+      <div class="step">
+        <h4>3 — Grounding</h4>
+        <p>Rebuilding from internal stability.</p>
+      </div>
+      <div class="step">
+        <h4>4 — Integration</h4>
+        <p>Embedding the Shift into daily leadership behavior.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>The Shift begins <em>with a single conversation.</em></h2>
+    <a href="contact.html" class="btn">Begin the Conversation</a>
+    <a href="engage.html" class="btn">Explore the Method</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>CLARITYZEN</h4>
+        <p>A sanctuary for senior executives committed to stillness, clarity, and purpose.</p>
+      </div>
+  
+      <div>
+        <h4>Navigation</h4>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="engage.html">Engage</a>
+        <a href="contact.html">Contact</a>
+      </div>
+  
+      <div>
+        <h4>Connect</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">X</a>
+      </div>
+    </div>
+  
+    <div class="copyright">
+      © 2026 ClarityZen. All rights reserved.
+    </div>
+  </footer>
+  
+  </body>
+  </html>

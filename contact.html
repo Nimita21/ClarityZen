@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ClarityZen</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="description" content="ClarityZen is a philosophy for those who lead.
+It advances a single belief:
+Clarity precedes scale.
+Built on disciplined thinking and strategic composure, ClarityZen is an evolving body of principles designed to shape leaders, organizations, and systems for the long term.">
+<link rel="canonical" href="https://clarityzen.com/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png">
+<style>
+:root {
+  --bg: #0b0f16;
+  --bg-soft: #111722;
+  --text: #e8e8e8;
+  --muted: #9aa3b2;
+  --gold: #c6a86e;
+  --border: #1e2633;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* NAV */
+nav {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-btn {
+  border: 1px solid var(--gold);
+  padding: 8px 16px;
+  color: var(--gold);
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: var(--gold);
+  color: #000;
+}
+.btn-outline {
+  border: 1px solid var(--gold);
+  padding: 8px 18px;
+  color: var(--gold);
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 140px 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.05), transparent);
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.hero em {
+  font-style: italic;
+  color: var(--muted);
+}
+
+.hero p {
+  margin-top: 30px;
+  color: var(--muted);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SECTION */
+.section {
+  padding: 100px 0;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+ul.checklist {
+  margin-top: 30px;
+  list-style: none;
+}
+
+ul.checklist li {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+}
+
+ul.checklist li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  padding: 30px;
+  min-height: 180px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--gold);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card small {
+  color: var(--gold);
+}
+
+/* FORM */
+form {
+  margin-top: 60px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 14px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+button {
+  margin-top: 30px;
+  padding: 14px 30px;
+  background: var(--gold);
+  border: none;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 100px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+footer h4 {
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+footer p, footer a {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.copyright {
+  margin-top: 40px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 38px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- NAV -->
+<nav>
+    <div class="logo">CLARITYZEN</div>
+    <div class="nav-links">
+        <a href="philosophy.html">Philosophy</a>
+        <a href="shift.html">The Shift</a>
+        <a href="engage.html">Engage</a>
+        <a href="contact.html" class="nav-btn">Begin</a>
+      </div>
+</nav>
+
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>This is not a sales page.<br><em>It is a threshold.</em></h1>
+    <p>
+      What follows is a quiet conversation — not a pitch. We want to understand
+      where you are, what you are carrying, and whether ClarityZen is the right
+      environment for the work you are ready to do.
+    </p>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="section">
+  <div class="container split">
+    <div>
+      <h2>ClarityZen is not for everyone.<br><em>It is for the right few.</em></h2>
+      <p class="muted">
+        We work exclusively with senior leaders who have already achieved
+        significant success — and who know that the next level of performance
+        requires a different kind of inner work.
+      </p>
+
+      <ul class="checklist">
+        <li>You are a founder, executive, or C-suite leader.</li>
+        <li>You have achieved external success and are seeking what’s next.</li>
+        <li>You are skeptical of surface-level coaching.</li>
+        <li>You are ready to become who you truly are.</li>
+      </ul>
+    </div>
+
+    <div>
+      <img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3"
+           alt="Mountain Night"
+           style="width:100%; border-radius:4px;">
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="section" style="background: var(--bg-soft);">
+  <div class="container">
+    <h2 style="text-align:center;">Select the path that calls to you.</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Private Executive Coaching</h3>
+        <p class="muted">One-on-one work for senior leaders navigating complexity.</p>
+        <small>Apply to Begin</small>
+      </div>
+
+      <div class="card">
+        <h3>Leadership Circles</h3>
+        <p class="muted">Curated groups of leaders committed to growth.</p>
+        <small>Apply to Join</small>
+      </div>
+
+      <div class="card">
+        <h3>Corporate Workshops</h3>
+        <p class="muted">Immersive sessions designed for leadership teams.</p>
+        <small>Inquire</small>
+      </div>
+
+      <div class="card">
+        <h3>Global Programs</h3>
+        <p class="muted">Seasonal retreats and intensives.</p>
+        <small>Coming Soon</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+  <div class="container">
+    <h2 style="text-align:center;">Tell us where you are.</h2>
+
+    <form>
+      <div class="form-grid">
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Company Role">
+        <select class="full">
+          <option>Path of Interest</option>
+          <option>Private Executive Coaching</option>
+          <option>Leadership Circles</option>
+          <option>Corporate Workshops</option>
+        </select>
+        <textarea class="full" placeholder="What brings you here now?"></textarea>
+      </div>
+
+      <button type="submit">Begin the Conversation</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4>CLARITYZEN</h4>
+      <p>A sanctuary for senior executives committed to stillness, clarity, and purpose.</p>
+    </div>
+
+    <div>
+      <h4>Navigation</h4>
+      <a href="philosophy.html">Philosophy</a>
+      <a href="engage.html">Engage</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <h4>Connect</h4>
+      <a href="#">LinkedIn</a>
+      <a href="#">X</a>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2026 ClarityZen. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
